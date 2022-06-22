@@ -77,7 +77,18 @@ h7.myJobs-card-title{
 #myJobs-icon-new-job {
     margin-right: 30px;
     cursor: pointer;
+    border-radius: 100px;
+    background-color: #F3C42E;
+    color: #530084;
+    border:solid 1px ;
 }
+#myJobs-icon-new-job:hover {
+    margin-right: 30px;
+    cursor: pointer;
+    color:#F3C42E;
+    background-color: #530084
+}
+
 
 .myJobs-card {
     background-color: #530084;

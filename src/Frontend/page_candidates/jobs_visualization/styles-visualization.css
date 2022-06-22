@@ -190,10 +190,11 @@
 #jobsVisualization-reset {
     margin-top: 1%;
     width: 80%;
-    background-color: rgb(83, 00, 132);
-    color: white;
+    background-color: rgb(189, 189, 189);
+    color: black;
+    font-weight: bold;
     border-style: solid;
-    border-color: rgb(83, 00, 132);
+    border-color: rgb(189, 189, 189);
     border-radius: 2px;
     margin-right: 1rem;
 }

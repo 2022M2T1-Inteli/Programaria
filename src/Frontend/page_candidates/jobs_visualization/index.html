@@ -65,39 +65,45 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p>Modalidade:</p>
+            
             <form id="jobsVisualization-form-filter" onsubmit="return buscar(event)">
               <div>
-                <label for="jobsVisualization-name">pesquise aqui: </label>
-                <input type="text" name ="name" id="jobsVisualization-name" placeholder="digite aqui o nome da vaga">
+                <label for="jobsVisualization-name" style="text-align: center;">Digite o nome da vaga: </label>
+                <input type="text" name ="name" class="form-control" id="jobsVisualization-name" placeholder="Ex: Analista de Sistemas">
               </div>
+              <hr>
+              <p>Modalidade:</p>
               <div>
                 <input
                   type="radio"
                   name="modalidade"
                   id="jobsVisualization-present"
-                  value="presencial"
+                  value="Presencial"
+                  class="form-check-input"
                 />
-                <label for="jobsVisualization-present"> PRESENCIAL </label>
+                <label for="jobsVisualization-present" class="form-check-label"> PRESENCIAL </label>
               </div>
               <div>
                 <input
                   type="radio"
                   name="modalidade"
                   id="jobsVisualization-remote"
-                  value="remoto"
+                  value="Remoto"
+                  class="form-check-input"
                 />
-                <label for="jobsVisualization-remote"> REMOTO </label>
+                <label for="jobsVisualization-remote" class="form-check-label"> REMOTO </label>
               </div>
               <div> 
                 <input
                   type="radio"
                   name="modalidade"
                   id="jobsVisualization-hybrid"
-                  value="hibrido"
+                  value="Híbrido"
+                  class="form-check-input"
                 />
-                <label for="jobsVisualization-hybrid"> HIBRIDO </label>
+                <label for="jobsVisualization-hybrid" class="form-check-label"> HIBRIDO </label>
               </div>
+              <hr>
               <p>Regime de trabalho:</p>
               <div>
                 <input
@@ -105,8 +111,9 @@
                   name="regime-de-trabalho"
                   id="jobsVisualization-clt"
                   value="CLT"
+                  class="form-check-input"
                 />
-                <label for="jobsVisualization-clt"> CLT </label>
+                <label for="jobsVisualization-clt" class="form-check-label"> CLT </label>
               </div>
               <div>
                 <input
@@ -114,8 +121,9 @@
                   name="regime-de-trabalho"
                   id="jobsVisualization-estagio"
                   value="estagio"
+                  class="form-check-input"
                 />
-                <label for="jobsVisualization-estagio"> ESTAGIO </label>
+                <label for="jobsVisualization-estagio" class="form-check-label"> ESTAGIO </label>
               </div>
               <div>
                 <input
@@ -123,9 +131,11 @@
                   name="regime-de-trabalho"
                   id="jobsVisualization-pj"
                   value="PJ"
+                  class="form-check-input"
                 />
-                <label for="jobsVisualization-pj"> PJ </label>
+                <label for="jobsVisualization-pj" class="form-check-label"> PJ </label>
               </div>
+              <hr>
               <p>Proficiência:</p>
               <div>
                 <input
@@ -133,8 +143,9 @@
                   name="proficiencia"
                   id="jobsVisualization-junior"
                   value="JUNIOR"
+                  class="form-check-input"
                 />
-                <label for="jobsVisualization-junior"> JÚNIOR </label>
+                <label for="jobsVisualization-junior" class="form-check-label"> JÚNIOR </label>
               </div>
               <div>
                 <input
@@ -142,8 +153,9 @@
                   name="proficiencia"
                   id="jobsVisualization-pleno"
                   value="PLENO"
+                  class="form-check-input"
                 />
-                <label for="jobsVisualization-pleno"> PLENO </label>
+                <label for="jobsVisualization-pleno" class="form-check-label"> PLENO </label>
               </div>
               <div>
                 <input
@@ -151,12 +163,14 @@
                   name="proficiencia"
                   id="jobsVisualization-senior"
                   value="SENIOR"
+                  class="form-check-input"
                 />
-                <label for="jobsVisualization-senior"> SÊNIOR </label>
+                <label for="jobsVisualization-senior" class="form-check-label"> SÊNIOR </label>
               </div>
+              <hr>
               <div id="jobsVisualization-space-confirm-filter">
                 <input type="reset" id="jobsVisualization-reset">
-                <button id="jobsVisualization-confirm-filter" type="submit">CONFIRMA</button>
+                <button id="jobsVisualization-confirm-filter" type="submit">Pesquisar</button>
               </div>
             </form>
           </div>

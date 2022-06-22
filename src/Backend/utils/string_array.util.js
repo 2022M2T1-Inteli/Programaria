@@ -1,5 +1,6 @@
 const StringList = {
 	unpack: function (str) {
+		str = String(str)
 		return str.split(',').map(function (item) {
 			return parseInt(item.trim());
 		});
