@@ -27,7 +27,7 @@ function create_profile() {
             "#registrationCompany-input-link"
         ).val()}&description=${$("#registrationCompany-textarea").val()}`,
     },
-        window.location.href = "../my_jobs/index.html"
+        window.location.href = "/"
     );
 
 };
