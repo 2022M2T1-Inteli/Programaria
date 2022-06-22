@@ -25,6 +25,11 @@
     background-color: rgb(245, 239, 239);
 }
 
+#likesCandidates-body {
+    font-family: nunito, sans-serif; 
+    background-color: rgb(245, 239, 239);
+}
+
 .jobsVisualization-style {
     text-align: left;
 }
@@ -56,6 +61,11 @@
 }
 
 #jobsVisualization-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#likesCandidates-cards {
     display: flex;
     flex-wrap: wrap;
 }
@@ -135,21 +145,21 @@
 .jobsVisualization-icon-like-unclicked {
     align-self: flex-end;
     cursor: pointer;
-    color: rgb(243, 196, 46);
+    color: rgb(162, 161, 158);
 }
 
 .jobsVisualization-icon-like-clicked {
     align-self: flex-end;
     cursor: pointer;
-    color: rgb(83, 00, 132);
-}
-
-.jobsVisualization-icon-like-clicked:hover {
     color: rgb(243, 196, 46);
 }
 
+.jobsVisualization-icon-like-clicked:hover {
+    color: rgb(239, 214, 132);
+}
+
 .jobsVisualization-icon-like-unclicked:hover {
-    color: rgb(83, 00, 132);
+    color: rgb(144, 144, 144);
 }
 
 #jobsVisualization-form-filter {
