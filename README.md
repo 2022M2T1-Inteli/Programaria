@@ -67,6 +67,7 @@ Nosso projeto ajuda candidatas na área de tecnologia que buscam emprego a encon
   &emsp;&emsp;|-->page_recruiter<br>
   <br>
 |readme.md<br>
+|license.txt<br>
 <br>
 <br>
 Temos 3 pastas que seguem da seguinte forma:
