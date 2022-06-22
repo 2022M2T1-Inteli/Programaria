@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 // Carrega a NavBar e a SideBar 
-=======
-// Carrega a navbar na tela
->>>>>>> Stashed changes
 window.addEventListener('load', function () {
 	$('#jobsVisualization-header').load('/page_candidates/side_and_navbar/index.html', function (response, status) {
 	});
