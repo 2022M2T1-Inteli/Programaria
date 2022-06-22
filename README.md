@@ -9,13 +9,13 @@
 ## Programaria
 
 ## Integrantes: 
+* <a href="https://www.linkedin.com/in/alberto-da-rocha-miranda-angrysine/">Alberto Da Rocha Miranda</a>
 * <a href="https://www.linkedin.com/in/gabrielriostorres/">Gabriel Torres</a>
 * <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-gon%C3%A7alves-carazzato-147120231/">João Pedro Carazzato</a>
-* <a href="https://www.linkedin.com/in/vinicioslugli/">Vinicios Lugli</a>
-* <a href="https://www.linkedin.com/in/mihaellalves/">Mihaell Alves</a>
-* <a href="https://www.linkedin.com/in/alberto-da-rocha-miranda-angrysine/">Alberto Da Rocha Miranda</a>
-* <a href="https://www.linkedin.com/in/valentina-garcia-a015981b8/">Valentina Garcia</a>
 * <a href="https://www.linkedin.com/in/melyssa-rojas-221610204/">Melyssa Rojas</a>
+* <a href="https://www.linkedin.com/in/mihaellalves/">Mihaell Alves</a>
+* <a href="https://www.linkedin.com/in/valentina-garcia-a015981b8/">Valentina Garcia</a>
+* <a href="https://www.linkedin.com/in/vinicioslugli/">Vinicios Lugli</a>
 
 ## Descrição
 
