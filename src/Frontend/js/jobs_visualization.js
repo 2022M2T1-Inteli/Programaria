@@ -95,7 +95,7 @@ function loadCard(query = {}) {
               
               $('#jobsVisualization-cards').append(
                 `<!--Inicio Card-->
-                <div class="col-4">
+                <div class="col-12 col-sm-4 col-s-12 col-m-12 col-xs-12" id="cardStart">
               <div class="card container d-flex justify-content-between align-items-center text-black jobsVisualization-fix-center col-12" id=jobsVisualization-card-` + [percentage >= 60 ? "green" : percentage >= 40 ? "yellow" : "red"] + `>
               <div class="row">
               <div class="mt-3 text-center col-12">
