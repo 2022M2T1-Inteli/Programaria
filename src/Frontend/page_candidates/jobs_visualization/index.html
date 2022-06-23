@@ -41,8 +41,8 @@
   </head>
   <header id="jobsVisualization-header"></header>
   <body class="mt-5" onload="loadCard()" id="jobsVisualization-body">
-    <main class="mt-5 text-black row gx-0"></main>
     <main class="mt-5 text-black row" style="margin-bottom: 5rem">
+      <h2 class="text-center" style="margin-bottom: 1.2rem; font-family:Nunito">Vagas para você</h2>
       <div id="jobsVisualization-cards" class="row col-12 flex justify-content-center"></div>
     </main>
     <!--Modal Filter-->
@@ -180,11 +180,20 @@
     <!--Acaba modal filter-->
     <br><br><br><br>
   </body>
-  <footer id="jobsVisualization-footer">
-    <div id="jobsVisualization-guide">
+  <footer id="jobsVisualization-footer" style="display:block;justify-content:center; text-align:center">
+    <p style="font-family:Nunito;">Guia para as bordas</p>
+    <div id="jobsVisualization-guide" style="text-align:center;justify-content:center;margin-top: -5px;">
       &nbsp;&nbsp;<div id="jobsVisualization-box-green"></div>
-      <p id="jobsVisualization-guide-tutorial">
-        Adepta a se candidatar para a vaga
+      <p id="jobsVisualization-guide-tutorial" style="font-family:Nunito;">
+        Você é muito compatível com a vaga
+      </p>
+      &nbsp;&nbsp;<div id="jobsVisualization-box-yellow" style="margin-bottom: 0.28rem;"></div>
+      <p id="jobsVisualization-guide-tutorial" style="font-family:Nunito;">
+        Você é compatível com a vaga
+      </p>
+      &nbsp;&nbsp;<div id="jobsVisualization-box-red" style="margin-bottom: 0.28rem;"></div>
+      <p id="jobsVisualization-guide-tutorial" style="font-family:Nunito;">
+        Você não é compatível com a vaga
       </p>
     </div>
     

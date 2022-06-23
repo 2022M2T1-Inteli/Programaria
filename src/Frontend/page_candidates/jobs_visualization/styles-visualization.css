@@ -127,6 +127,18 @@
     background-color: rgb(14, 117, 23);
     height: 30px;
 }
+#jobsVisualization-box-yellow {
+    align-self: center;
+    width: 30px;
+    background-color: yellow;
+    height: 30px;
+}
+#jobsVisualization-box-red {
+    align-self: center;
+    width: 30px;
+    background-color: red;
+    height: 30px;
+}
 
 #jobsVisualization-guide-tutorial {
     align-self: flex-start;
