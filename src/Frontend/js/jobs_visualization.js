@@ -4,6 +4,10 @@ window.addEventListener('load', function () {
 	});
 });
 
+if (!localStorage.getItem('UserBITDiscover')) {
+  window.location.href = '/';
+}
+
 var userInfo = JSON.parse(localStorage.getItem("UserBITDiscover"))
 var likesArray = []
 console.log("ID User ", userInfo.id)

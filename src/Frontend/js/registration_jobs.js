@@ -9,6 +9,10 @@ window.addEventListener('load', function () {
 	});
 });
 
+if (!localStorage.getItem('UserBITDiscover')) {
+    window.location.href = '/';
+}
+
 //Pega os dados para colocar nas tags de soft e adiciona funcionalidade a essas tags
 $.get("http://127.0.0.1:3000/api/softskills/", function(response) {
 	for (i of response) {

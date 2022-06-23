@@ -4,6 +4,10 @@ window.addEventListener('load', function () {
 	});
 });
 
+if (!localStorage.getItem('UserBITDiscover')) {
+  window.location.href = '/';
+}
+
 // faz os botões de hard e soft skill funcionar
 function button(id) {
   if (id.getAttribute("class") == "myProfile-button-tag-unclicked" ){

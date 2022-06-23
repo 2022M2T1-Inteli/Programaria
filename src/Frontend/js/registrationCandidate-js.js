@@ -7,6 +7,10 @@ function button(id) {
     id.setAttribute("class", "registrationCandidates-button-tag-unclicked")
   }
 }
+
+if (!localStorage.getItem('UserBITDiscover')) {
+  window.location.href = '/';
+}
 //executa a função ao iniciar a pagina adicionando os botões de hard e softskills
 function onload() {
   //carrega os botões de softskill e os adiciona na página

@@ -32,6 +32,10 @@ function create_profile() {
 
 };
 
+if (!localStorage.getItem('UserBITDiscover')) {
+    window.location.href = '/';
+}
+
 // função que faz voltar para a página inicial
 function backbtn() {
     window.location.href = "/";

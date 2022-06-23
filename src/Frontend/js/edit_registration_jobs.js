@@ -15,6 +15,10 @@ window.addEventListener('load', function () {
 	loadBonus()
 });
 
+if (!localStorage.getItem('UserBITDiscover')) {
+    window.location.href = '/';
+}
+
 // Carrega as tags e as preenche se o usuário tiver clicado antes
 function loadSoft() {
 $.get("http://127.0.0.1:3000/api/softskills/", function(response) {

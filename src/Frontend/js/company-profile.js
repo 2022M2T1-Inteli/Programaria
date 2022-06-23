@@ -4,6 +4,10 @@ window.addEventListener('load', function () {
     });
 });
 
+if (!localStorage.getItem('UserBITDiscover')) {
+    window.location.href = '/';
+}
+
 // Funcao que desabilita inputs
 function pencilbutton() {
     var inputs = document.querySelectorAll("input")
