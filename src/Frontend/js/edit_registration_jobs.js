@@ -15,6 +15,10 @@ window.addEventListener('load', function () {
 	loadBonus()
 });
 
+if (!localStorage.getItem('UserBITDiscover')) {
+    window.location.href = '/';
+}
+
 // Carrega as tags e as preenche se o usuário tiver clicado antes
 function loadSoft() {
 $.get("http://127.0.0.1:3000/api/softskills/", function(response) {
@@ -142,15 +146,18 @@ var jobsTagsBonus = document.getElementById('registrationJobs-tags-bonus').child
 var iconConfirm = document.getElementById('registrationJobs-icon-confirm');
 var jobsEmail = document.getElementById('registrationJobs-email')
 var jobsCell = document.getElementById('registrationJobs-cellphone')
+var JobsNameList = document.getElementById('registrationJobs-jobs-list')
 
 // Validacao com condicao do campo input do Regime de trabalho
 jobsType.addEventListener('input', function () {
 	console.log(this.value)
-	if (this.value == "Estagio") {
+	if (this.value == "estagio") {
 		jobsTime.disabled = true
 		jobsProficiency.disabled = true
 		jobsTime.style.backgroundColor = 'gray'
 		jobsProficiency.style.backgroundColor = 'gray'
+		jobsProficiency.value = 'JUNIOR'
+		jobsTime.value = 'half-time'
 	} else {
 		jobsTime.disabled = false
 		jobsProficiency.disabled = false
@@ -252,6 +259,13 @@ function getInformationJob () {
 
 }
 
+// Funcao que compara o input do usuario com a lista de nomes de vagas
+function compareValueInNameJob (inputUser) {
+	for (i of JobsNameList.children) {
+		if (i.value == inputUser.value) {
+			return 'certo'
+	}
+}}
 
 // Promessa que valida se todos os campos foram preenchidos
 // armazena os valores de entrada 
@@ -260,8 +274,9 @@ var buttonTrigger = new Promise(function (resolve, reject) {
 	iconConfirm.addEventListener('click', function (e) {
 	e.preventDefault();
 
-		if (jobsSalaryMin.value && jobsSalaryMax.value && jobsCP.value && jobsDescription.value && jobsActivities.value && iterateTagsHabilitiesHard() && iterateTagsHabilitiesSoft() &&
-	iterateTagsBonus()) {
+		if (jobsSalaryMin.value && jobsSalaryMax.value && jobsCP.value && jobsDescription.value && jobsActivities.value && jobsEmail.value && jobsCell.value
+			&& iterateTagsHabilitiesHard().length > 1 && iterateTagsHabilitiesSoft().length > 1 && iterateTagsBonus()
+			&& compareValueInNameJob(jobsName) == 'certo') {
 
 	resolve([informationJob = {
 		postal_code: parseInt(jobsCP.value),
@@ -283,7 +298,7 @@ var buttonTrigger = new Promise(function (resolve, reject) {
 	}, {email: jobsEmail.value, number: jobsCell.value}]);
 
 } else {
-	reject('Preencha todos os dados nos campos')
+	alert("Preencha todos os campos, coloque no minimo duas tags de Soft e duas Tags de Hard nos campos de requisitos e só use nomes de vagas dado pela lista")
 }
 
 })}).then((res) => {
@@ -297,10 +312,6 @@ var buttonTrigger = new Promise(function (resolve, reject) {
 	})
 })
 
-	// Alerta se houve uma excessão
-buttonTrigger.catch((res) => {
-	alert(res)
-})
 
 // Funcao que faz o Método PUT
 function editRegistration (urlPUT, idJob, information){

@@ -9,13 +9,13 @@
 ## Programaria
 
 ## Integrantes: 
+* <a href="https://www.linkedin.com/in/alberto-da-rocha-miranda-angrysine/">Alberto Da Rocha Miranda</a>
 * <a href="https://www.linkedin.com/in/gabrielriostorres/">Gabriel Torres</a>
 * <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-gon%C3%A7alves-carazzato-147120231/">João Pedro Carazzato</a>
-* <a href="https://www.linkedin.com/in/vinicioslugli/">Vinicios Lugli</a>
-* <a href="https://www.linkedin.com/in/mihaellalves/">Mihaell Alves</a>
-* <a href="https://www.linkedin.com/in/alberto-da-rocha-miranda-angrysine/">Alberto Da Rocha Miranda</a>
-* <a href="https://www.linkedin.com/in/valentina-garcia-a015981b8/">Valentina Garcia</a>
 * <a href="https://www.linkedin.com/in/melyssa-rojas-221610204/">Melyssa Rojas</a>
+* <a href="https://www.linkedin.com/in/mihaellalves/">Mihaell Alves</a>
+* <a href="https://www.linkedin.com/in/valentina-garcia-a015981b8/">Valentina Garcia</a>
+* <a href="https://www.linkedin.com/in/vinicioslugli/">Vinicios Lugli</a>
 
 ## Descrição
 
@@ -32,6 +32,9 @@ Nosso projeto tem o intuito de facilitar o acesso de mulheres na tecnologia, se 
 💡 Um parágrafo sobre o que é nosso projeto e o que ele faz.
 <br><br>
 Nosso projeto ajuda candidatas na área de tecnologia que buscam emprego a encontrar seu emprego dos sonhos através de um sistema simples e rápido de fácil entendimento!
+<br><br>
+<a href='https://plataform-bit.herokuapp.com/' > Link para o site </a>
+<br>
 
 ## 🛠 Estrutura de pastas
 
@@ -67,6 +70,7 @@ Nosso projeto ajuda candidatas na área de tecnologia que buscam emprego a encon
   &emsp;&emsp;|-->page_recruiter<br>
   <br>
 |readme.md<br>
+|license.txt<br>
 <br>
 <br>
 Temos 3 pastas que seguem da seguinte forma:
@@ -134,6 +138,8 @@ A cada atualização os detalhes devem ser lançados aqui.
 ## 📋 Licença/License
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+<p> Este projeto está licenciado nos termos da licença MIT </p>
+<br>
 
 ## 🎓 Referências
 

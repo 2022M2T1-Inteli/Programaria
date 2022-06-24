@@ -141,3 +141,10 @@
 #sideNavBar-link:hover {
     color: #F3C42E;
 }
+
+#sideNavBar-btn-logout {
+    /* font-family: 'Nunito', sans-serif; */
+    border: none;
+    background-color: white;
+    font-weight: bold;
+}

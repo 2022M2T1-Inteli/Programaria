@@ -4,6 +4,8 @@
     background-color: #f5efef !important;
 }
 
+
+
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -87,7 +89,6 @@ input::-webkit-inner-spin-button {
     height: 100%;
     width: 60%;
 }
-
 
 #registrationJobs-salary-min, #registrationJobs-salary-max, #registrationJobs-cp {
     border-style: #F3C42E;
@@ -304,3 +305,5 @@ input::-webkit-inner-spin-button {
 #registrationJobs-icon-confirm {
     cursor: pointer;
 }
+
+  

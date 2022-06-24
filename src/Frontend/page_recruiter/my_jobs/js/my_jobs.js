@@ -5,6 +5,10 @@ window.addEventListener('load', function () {
 	});
 });
 
+if (!localStorage.getItem('UserBITDiscover')) {
+    window.location.href = '/';
+}
+
 var iconNewJob = document.getElementById('myJobs-icon-new-job')
 
 iconNewJob.addEventListener('click', function () {

@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/1b4e4dcd7e.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Cadastro de Candidata</title>
+    <link rel="icon" type="image/png" href="../../assets/logoIcon.png">
 <!-- na head, declaro o ajax, fontawesome e o bootstrap, assim como o css -->
 </head>
 
@@ -59,16 +60,16 @@
                                     </div>
                                     <div class="col-lg-5">
                                         <label for="registrationCandidates-input-age" class="registrationCandidates-label">Idade</label>
-                                        <input type="text" placeholder="Idade" class="registrationCandidates-columns form-control registrationCandidates-input-box registrationCandidates-placeholder" id="registrationCandidates-input-age" name="rC-input-age" />
+                                        <input type="number" placeholder="Idade" class="registrationCandidates-columns form-control registrationCandidates-input-box registrationCandidates-placeholder" id="registrationCandidates-input-age" name="rC-input-age" />
                                     </div>
                                     <div class="col-lg-5">
                                         <label class="registrationCandidates-label" for="registrationCandidates-input-CPF">CPF</label>
-                                        <input type="text" class="registrationCandidates-columns form-control registrationCandidates-placeholder registrationCandidates-input-box" placeholder="CPF" id="registrationCandidates-input-CPF" name="rC-input-CPF" />
+                                        <input type="number" class="registrationCandidates-columns form-control registrationCandidates-placeholder registrationCandidates-input-box" placeholder="CPF" id="registrationCandidates-input-CPF" name="rC-input-CPF" />
                                     </div>
                                     <div class="col-lg-5">
                                         <label for="registrationCandidates-input-cp" class="registrationCandidates-label">Código Postal
                                             (CEP)</label>
-                                        <input placeholder="Código Postal" class="registrationCandidates-columns form-control registrationCandidates-input-box registrationCandidates-placeholder" id="registrationCandidates-input-cp" name="rC-input-cp"/>
+                                        <input type="number" placeholder="Código Postal" class="registrationCandidates-columns form-control registrationCandidates-input-box registrationCandidates-placeholder" id="registrationCandidates-input-cp" name="rC-input-cp"/>
                                     </div>
                                 </div>
                             </div>
@@ -205,7 +206,7 @@
                     </div>
                 </div>
                 <!-- botão de criar o perfil -->
-                <div class="d-grid col-lg-3 col-md-3 col-sm-3 mx-auto input-container">
+                <div class="d-grid col-lg-2 col-md-2 col-sm-2 mx-auto input-container">
                     <button class="btn btn-primary registrationCandidates-btn" onclick="create_profile()">Criar Perfil</button>
                 </div>
                 <!-- botão de voltar para a página de login -->

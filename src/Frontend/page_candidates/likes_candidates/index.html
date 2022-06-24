@@ -1,25 +1,215 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<link rel="stylesheet" href="pagina_De_Like_Do_Candidato.css">
-		<title>Pagina de like do Candidato</title>
-	</head>
-	<body id="likesCandidates-body" onload="loadCard()">
-		<!-- O header contém a navbar-->
-		<header id="likesCandidates-header">
-		</header>
-		<!-- O header acaba aqui -->
-		<!-- Os cards estão aqui-->
-		<main id="likesCandidates-main">
-		</main>
-		<!-- O conteúdo dos cards acaba aqui-->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="/js/likes_candidates.js"></script>
-    </body>
+<html lang="en" id="jobsVisualization-html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualização de Vagas</title>
+    <link rel="stylesheet" href="../jobs_visualization/styles-visualization.css" />
+    <link rel="icon" type="image/png" href="../../assets/logoIcon.png">
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--Script JS-->
+    <script src="\js\likescandidates.js"></script>
+    <!-- Bootstrap CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/c75c7c68e8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Favicons -->
+    <link
+      rel="mask-icon"
+      href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg"
+      color="#7952b3"
+    />
+  </head>
+  <header id="jobsVisualization-header"></header>
+  <body class="mt-5" onload="loadCard()" id="jobsVisualization-body">
+    <main class="mt-5 text-black row gx-0"></main>
+    <main class="mt-5 text-black row" style="margin-bottom: 5rem">
+      <div id="jobsVisualization-cards" class="row col-12 flex justify-content-center"></div>
+    </main>
+    <!--Modal Filter-->
+    <div 
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog jobsVisualization-modal-dialog">
+        <div class="modal-content jobsVisualization-modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">FILTRO DE VAGAS</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="jobsVisualization-form-filter" onsubmit="return buscar(event)">
+              <div>
+                <label for="jobsVisualization-name" style="text-align: center;">Digite o nome da vaga: </label>
+                <input type="text" name ="name" class="form-control" id="jobsVisualization-name" placeholder="Ex: Analista de Sistemas">
+              </div>
+              <hr>
+              <p>Modalidade:</p>
+              <div>
+                <input
+                  type="radio"
+                  name="modalidade"
+                  id="jobsVisualization-present"
+                  value="Presencial"
+                  class="form-check-input"
+                />
+                <label for="jobsVisualization-present" class="form-check-label"> PRESENCIAL </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="modalidade"
+                  id="jobsVisualization-remote"
+                  value="Remoto"
+                  class="form-check-input"
+                />
+                <label for="jobsVisualization-remote" class="form-check-label"> REMOTO </label>
+              </div>
+              <div> 
+                <input
+                  type="radio"
+                  name="modalidade"
+                  id="jobsVisualization-hybrid"
+                  value="Híbrido"
+                  class="form-check-input"
+                />
+                <label for="jobsVisualization-hybrid" class="form-check-label"> HIBRIDO </label>
+              </div>
+              <hr>
+              <p>Regime de trabalho:</p>
+              <div>
+                <input
+                  type="radio"
+                  name="regime-de-trabalho"
+                  id="jobsVisualization-clt"
+                  value="CLT"
+                  class="form-check-input"
+                />
+                <label for="jobsVisualization-clt" class="form-check-label"> CLT </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="regime-de-trabalho"
+                  id="jobsVisualization-estagio"
+                  value="estagio"
+                  class="form-check-input"
+                />
+                <label for="jobsVisualization-estagio" class="form-check-label"> ESTAGIO </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="regime-de-trabalho"
+                  id="jobsVisualization-pj"
+                  value="PJ"
+                  class="form-check-input"
+                />
+                <label for="jobsVisualization-pj" class="form-check-label"> PJ </label>
+              </div>
+              <hr>
+              <p>Proficiência:</p>
+              <div>
+                <input
+                  type="radio"
+                  name="proficiencia"
+                  id="jobsVisualization-junior"
+                  value="JUNIOR"
+                  class="form-check-input"
+                />
+                <label for="jobsVisualization-junior" class="form-check-label"> JÚNIOR </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="proficiencia"
+                  id="jobsVisualization-pleno"
+                  value="PLENO"
+                  class="form-check-input"
+                />
+                <label for="jobsVisualization-pleno" class="form-check-label"> PLENO </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="proficiencia"
+                  id="jobsVisualization-senior"
+                  value="SENIOR"
+                  class="form-check-input"
+                />
+                <label for="jobsVisualization-senior" class="form-check-label"> SÊNIOR </label>
+              </div>
+              <hr>
+              <div id="jobsVisualization-space-confirm-filter">
+                <input type="reset" id="jobsVisualization-reset">
+                <button id="jobsVisualization-confirm-filter" type="submit">Pesquisar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Acaba modal filter-->
+    <br><br><br><br>
+  </body>
+  <footer id="jobsVisualization-footer" style="display:block;justify-content:center; text-align:center">
+    <p style="font-family:Nunito;">Guia para as bordas</p>
+    <div id="jobsVisualization-guide" style="text-align:center;justify-content:center;margin-top: -5px;">
+      &nbsp;&nbsp;<div id="jobsVisualization-box-green"></div>
+      <p id="jobsVisualization-guide-tutorial" style="font-family:Nunito;">
+        Você é muito apta a vaga
+      </p>
+      &nbsp;&nbsp;<div id="jobsVisualization-box-yellow" style="margin-bottom: 0.28rem;"></div>
+      <p id="jobsVisualization-guide-tutorial" style="font-family:Nunito;">
+        Você é apta a vaga
+      </p>
+      &nbsp;&nbsp;<div id="jobsVisualization-box-red" style="margin-bottom: 0.28rem;"></div>
+      <p id="jobsVisualization-guide-tutorial" style="font-family:Nunito;">
+        Você é pouco/não apta a vaga
+      </p>
+    
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="35"
+      height="30"
+      fill="currentColor"
+      id="jobsVisualization-icon-filter"
+      class="bi bi-funnel-fill"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"
+      />
+    </svg>
+  </div>
+  </footer>
 </html>

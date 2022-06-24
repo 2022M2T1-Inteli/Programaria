@@ -7,6 +7,10 @@ function button(id) {
     id.setAttribute("class", "registrationCandidates-button-tag-unclicked")
   }
 }
+
+if (!localStorage.getItem('UserBITDiscover')) {
+  window.location.href = '/';
+}
 //executa a função ao iniciar a pagina adicionando os botões de hard e softskills
 function onload() {
   //carrega os botões de softskill e os adiciona na página
@@ -65,6 +69,7 @@ function create_profile() {
     data: `name=${$("#registrationCandidates-input-name").val()}&email=${$("#registrationCandidates-input-email").val()}&age=${$("#registrationCandidates-input-age").val()}&CPF=${$("#registrationCandidates-input-CPF").val()}&password=${$("#registrationCandidates-input-password").val()}&postal_code=${$("#registrationCandidates-input-cp").val()}&scholarship=${$("#registrationCandidates-scholarity").val()}&graduation=${$("#registrationCandidates-graduation").val()}&description=${$("#registrationCandidates-textarea").val()}&hardskills=${hard_text}&softskills=${soft_text}&departaments=${$("#registrationCandidates-experience").val()}`,
     success: function (data) {
       alert("Perfil Criado com sucesso! :D")
+      window.location.href = '/';
     }
   })
   // window.location.href = "../jobs_visualization/index.html"

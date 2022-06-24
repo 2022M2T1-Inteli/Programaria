@@ -10,6 +10,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="icon" type="image/png" href="../../assets/logoIcon.png">
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/1b4e4dcd7e.js"
@@ -22,7 +23,7 @@
     </style>
   </head>
   <!-- no body, declaro uma id para poder mexer na tela por inteiro -->
-
+  <header id="companyProfile-header"></header>
   <body class="companyProfile-body">
     <!-- as classes que NÃO comecam com "companyProfile" são do bootstrap -->
     <div class="container justify-content-center me-auto">
@@ -33,17 +34,8 @@
         >
           <div class="card-body">
             <!-- Body de todos os cards -->
-            <div class="container-lg my-5">
-              <div class="justify-content-center mb-10">
-                <!-- aqui coloco a logo da BIT -->
-                <img
-                  src="../../assets/logo.png"
-                  alt="bit-logo"
-                  class="companyProfile-image"
-                />
-              </div>
-            </div>
-
+            <br />
+            <br />
             <h2 id="companyProfile-title">Minha Empresa</h2>
             <!-- título da pagina -->
             <div class="row justify-content-center">
@@ -82,7 +74,7 @@
                           >CNPJ</label
                         >
                         <input
-                          type="text"
+                          type="number"
                           class="companyProfile-columns form-control companyProfile-placeholder companyProfile-input-box companyProfile-disabled"
                           placeholder="CNPJ"
                           id="companyProfile-input-cnpj"
@@ -157,6 +149,7 @@
                           >Código Postal (CEP)</label
                         >
                         <input
+                          type="number"
                           placeholder="Código Postal"
                           class="companyProfile-columns form-control companyProfile-input-box companyProfile-placeholder companyProfile-disabled"
                           id="companyProfile-input-cp"

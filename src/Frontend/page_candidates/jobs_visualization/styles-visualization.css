@@ -25,6 +25,11 @@
     background-color: rgb(245, 239, 239);
 }
 
+#likesCandidates-body {
+    font-family: nunito, sans-serif; 
+    background-color: rgb(245, 239, 239);
+}
+
 .jobsVisualization-style {
     text-align: left;
 }
@@ -60,6 +65,11 @@
     flex-wrap: wrap;
 }
 
+#likesCandidates-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #jobsVisualization-card-green {
     width: 20rem;
     border-style: solid;
@@ -71,8 +81,8 @@
 #jobsVisualization-card-yellow {
     width: 20rem;
     border-style: solid;
-    box-shadow: 0px 2px 15px rgb(207, 204, 31);
-    border: rgb(207, 204, 31);
+    box-shadow: 0px 2px 15px rgb(241, 239, 75);
+    border: rgb(241, 239, 75);
     border-width: 3px;
 }
 
@@ -87,7 +97,7 @@
 #jobsVisualization-footer {
     bottom: 0;
     width: 100%;
-    height: 10%;
+    height: 6rem;
     position: fixed;
     background-color: rgb(245, 239, 239);
     display: flex;
@@ -117,6 +127,18 @@
     background-color: rgb(14, 117, 23);
     height: 30px;
 }
+#jobsVisualization-box-yellow {
+    align-self: center;
+    width: 30px;
+    background-color: rgb(241, 239, 75);
+    height: 30px;
+}
+#jobsVisualization-box-red {
+    align-self: center;
+    width: 30px;
+    background-color: rgb(218, 28, 69);
+    height: 30px;
+}
 
 #jobsVisualization-guide-tutorial {
     align-self: flex-start;
@@ -132,14 +154,24 @@
     margin-bottom: 10%;
 }
 
-/* #jobsVisualization-icon-like {
+.jobsVisualization-icon-like-unclicked {
+    align-self: flex-end;
+    cursor: pointer;
+    color: rgb(162, 161, 158);
+}
+
+.jobsVisualization-icon-like-clicked {
     align-self: flex-end;
     cursor: pointer;
     color: rgb(243, 196, 46);
-} */
+}
 
-#jobsVisualization-icon-like:hover {
-    color: rgb(83, 00, 132);
+.jobsVisualization-icon-like-clicked:hover {
+    color: rgb(239, 214, 132);
+}
+
+.jobsVisualization-icon-like-unclicked:hover {
+    color: rgb(144, 144, 144);
 }
 
 #jobsVisualization-form-filter {
@@ -170,10 +202,11 @@
 #jobsVisualization-reset {
     margin-top: 1%;
     width: 80%;
-    background-color: rgb(83, 00, 132);
-    color: white;
+    background-color: rgb(189, 189, 189);
+    color: black;
+    font-weight: bold;
     border-style: solid;
-    border-color: rgb(83, 00, 132);
+    border-color: rgb(189, 189, 189);
     border-radius: 2px;
     margin-right: 1rem;
 }

@@ -42,10 +42,6 @@ class Companies extends DatabaseTable {
 				type: DataTypes.text,
 				notNull: true,
 			},
-			created_at: {
-				type: DataTypes.datetime,
-				notNull: true,
-			},
 		};
 
 		super('companies', columns);

@@ -27,10 +27,14 @@ function create_profile() {
             "#registrationCompany-input-link"
         ).val()}&description=${$("#registrationCompany-textarea").val()}`,
     },
-        window.location.href = "../my_jobs/index.html"
+        window.location.href = "/"
     );
 
 };
+
+if (!localStorage.getItem('UserBITDiscover')) {
+    window.location.href = '/';
+}
 
 // função que faz voltar para a página inicial
 function backbtn() {

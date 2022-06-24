@@ -106,6 +106,11 @@
     text-decoration: none;
 }
 
+.sideNavBar-black {
+    color: rgb(83, 00, 132);
+    text-decoration: none;
+}
+
 .sideNavBar-black:hover {
     color: #F3C42E;
     text-decoration: none;
@@ -113,4 +118,13 @@
 /* Bootstrap */
 .offcanvas-header{
     height: 4.8rem;
+}
+
+#sideNavBar-btn-logout{
+    color: rgb(83, 00, 132); 
+    background-color: aqua;
+}
+
+.btn-link{
+    color: rgb(83, 00, 132); 
 }

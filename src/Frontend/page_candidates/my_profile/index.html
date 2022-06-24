@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="estilo.css" />
     <script src="https://kit.fontawesome.com/1b4e4dcd7e.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="../../assets/logoIcon.png">
     <title>Meu perfil</title>
 <!-- na head, declaro o ajax, fontawesome e o bootstrap, assim como o css -->
 </head>
-
+<header id="myProfile-header"></header>
 <body class="myProfile-body">  <!-- classe do body todo -->
     <div id="myProfile-navbar"></div>
     <div class="container justify-content-center me-auto">
@@ -20,12 +21,8 @@
         <div class="row justify-content-center">
             <div class="card justify-content-center" id="myProfile-cardsbootstrap">
                 <div class="card-body">
-                    <div class="container-lg my-5">
-                        <div class="justify-content-center mb-10">
-                            <!-- asset da logo -->
-                            <img src="../../assets/logo.png" alt="bit-logo" class="myProfile-image" />
-                        </div>
-                    </div>
+                    <br>
+                    <br>
                     <h2 id="myProfile-title">Meu perfil</h2>
                     <div class="row justify-content-center">
                         <h4 id="myProfile-info" class="myProfile-hs">
@@ -51,11 +48,11 @@
                                     </div>
                                     <div class="col-lg-5">
                                         <label for="myProfile-input-age" class="myProfile-label">Idade</label>
-                                        <input type="text" placeholder="Idade" class="myProfile-columns form-control myProfile-input-box myProfile-placeholder myProfile-disabled" id="myProfile-input-age" name="mP-input-age" disabled />
+                                        <input type="number" placeholder="Idade" class="myProfile-columns form-control myProfile-input-box myProfile-placeholder myProfile-disabled" id="myProfile-input-age" name="mP-input-age" disabled />
                                     </div>
                                     <div class="col-lg-5">
                                         <label class="myProfile-label" for="myProfile-input-CPF">CPF</label>
-                                        <input type="text" class="myProfile-columns form-control myProfile-placeholder myProfile-input-box myProfile-disabled" placeholder="000.000.000-00" id="myProfile-input-CPF" name="mP-input-CPF" disabled/>
+                                        <input type="number" class="myProfile-columns form-control myProfile-placeholder myProfile-input-box myProfile-disabled" placeholder="000.000.000-00" id="myProfile-input-CPF" name="mP-input-CPF" disabled/>
                                     </div>
                                     <div class="col-lg-5">
                                         <label for="myProfile-input-password" class="myProfile-label">Senha</label>
@@ -69,7 +66,7 @@
                                     <div class="col-lg-5">
                                         <label for="myProfile-input-cp" class="myProfile-label">Código Postal
                                             (CEP)</label>
-                                        <input placeholder="Código Postal" class="myProfile-columns form-control myProfile-input-box myProfile-placeholder myProfile-disabled" id="myProfile-input-cp" name="mP-input-cp" disabled/>
+                                        <input type="number" placeholder="Código Postal" class="myProfile-columns form-control myProfile-input-box myProfile-placeholder myProfile-disabled" id="myProfile-input-cp" name="mP-input-cp" disabled/>
                                     </div>
                                 </div>
                             </div>
