@@ -8,6 +8,7 @@ import HardSkills from './hardskills.model.js';
 import SoftSkills from './softskills.model.js';
 import JobContacts from './job_contacts.model.js';
 import Departaments from './departaments.model.js';
+import Admins from './admin.model.js';
 
 const jobs = new Jobs();
 const bonus = new Bonus();
@@ -19,5 +20,6 @@ const hardSkills = new HardSkills();
 const softSkills = new SoftSkills();
 const jobContacts = new JobContacts();
 const departaments = new Departaments();
+const admins = new Admins();
 
-export { jobs, bonus, candidatesGraduations, candidates, companies, graduationNamespaces, hardSkills, softSkills, jobContacts, departaments };
+export { admins, jobs, bonus, candidatesGraduations, candidates, companies, graduationNamespaces, hardSkills, softSkills, jobContacts, departaments };

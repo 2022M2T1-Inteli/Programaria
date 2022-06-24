@@ -6,5 +6,6 @@ import HardSkillsController from './hardskills.controller.js';
 import BonusController from './bonus.controller.js';
 import JobsContactsController from './jobs_contacts.controller.js';
 import MatchController from './match.controller.js';
+import AdminsController from './admins.controller.js';
 
-export { JobsController, CandidatesController, CompaniesController, SoftSkillsController, HardSkillsController, BonusController, JobsContactsController, MatchController };
+export { AdminsController, JobsController, CandidatesController, CompaniesController, SoftSkillsController, HardSkillsController, BonusController, JobsContactsController, MatchController };

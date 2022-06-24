@@ -27,12 +27,6 @@ function create_user(indetification, name, date, idade, email) {
 				<a href="#" class="table-link">
 					<span class="fa-stack">
 						<i class="fa fa-square fa-stack-2x"></i>
-						<i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-					</span>
-				</a>
-				<a href="#" class="table-link">
-					<span class="fa-stack">
-						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
 					</span>
 				</a>
@@ -53,17 +47,26 @@ function add_list_users(users) {
 	});
 }
 
-$(document).ready(function () {
-	document.getElementById('searchForm').addEventListener('submit', function (e) {
-		e.preventDefault();
-		let search_param = document.getElementById('search_param').value;
-		let search_data = document.getElementById('search_data').value;
-		let url = `/api/candidates?${search_param}=${search_data}%`;
+function update_list_users() {
+	let search_param = document.getElementById('search_param').value;
+	let search_data = document.getElementById('search_data').value;
+	let url = `/api/candidates?${search_param}=${search_data}%`;
 
-		$.get(url, function (data) {
-			document.getElementById('main-body').innerHTML = '';
-			add_list_users(data);
-		});
+	$.get(url, function (data) {
+		document.getElementById('main-body').innerHTML = '';
+		add_list_users(data);
+	});
+}
+
+$(document).ready(function () {
+	document.getElementById('searchForm').addEventListener('submit', function (e) {});
+	document.getElementById('search_data').addEventListener('input', function (e) {
+		e.preventDefault();
+		update_list_users();
+	});
+	document.getElementById('search_param').addEventListener('change', function (e) {
+		e.preventDefault();
+		update_list_users();
 	});
 
 	$.get('/api/candidates', function (data) {
