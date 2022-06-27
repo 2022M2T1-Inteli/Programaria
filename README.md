@@ -33,7 +33,7 @@ Nosso projeto tem o intuito de facilitar o acesso de mulheres na tecnologia, se 
 <br><br>
 Nosso projeto ajuda candidatas na área de tecnologia que buscam emprego a encontrar seu emprego dos sonhos através de um sistema simples e rápido de fácil entendimento!
 <br><br>
-<a href='https://bit-discover.herokuapp.com/' > Link para o site </a>
+<a href='https://bit-discover.herokuapp.com/'  > Link para o site </a>
 <br>
 
 ## 🛠 Estrutura de pastas
